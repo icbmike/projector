@@ -1,0 +1,50 @@
+@import "_variables";
+@import "_mixins";
+
+.downloadListComponent{
+
+	table{
+		width: 100%;
+		margin-top: 10px;
+		border-collapse: collapse;
+	}
+
+	.newDownloadButton{
+		margin-top: 5px;
+		width: 60px;
+		color:white;
+		padding-top: 5px;
+		padding-bottom: 5px;
+		background-color: @add-color;
+		&:hover{
+			background-color: @add-hover-color;
+		}
+	}
+}
+
+.download, .pendingDownload{
+	td{
+		padding: 5px;
+		border: 1px solid grey;
+
+		&.etaColumn, &.statusColumn{
+			text-align: center;
+		}
+
+	}
+}
+
+.pendingDownload{
+	.cancelButtonColumn{
+		width: 50px;
+		
+		button{
+			width: 100%;
+			background-color: @warning-color;
+			color:white;
+			&:hover{
+				background-color: @warning-hover-color;
+			}
+		}
+	}
+}
